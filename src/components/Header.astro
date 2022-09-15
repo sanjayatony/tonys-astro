@@ -1,0 +1,42 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+---
+
+<nav class="flex justify-between p-4 max-w-screen-xl mx-auto">
+	<div class="flex space-x-8 text-sm text-blue-700">
+		<HeaderLink href="/me">Me</HeaderLink>
+		<HeaderLink href="/now">Now</HeaderLink>
+		<HeaderLink href="/use">Use</HeaderLink>
+	</div>
+	<div class="flex space-x-4 text-white text-xs italic">
+		<HeaderLink
+			href="https://twitter.com/astrodotbuild"
+			target="_blank"
+			class="btn">Twitter ↗</HeaderLink
+		>
+		<HeaderLink
+			href="https://github.com/withastro/astro"
+			target="_blank"
+			class="btn">GitHub ↗</HeaderLink
+		>
+	</div>
+</nav>
+{
+	Astro.url.pathname == "/" ? (
+		<header class="max-w-screen-md py-24 text-center mx-auto">
+			<h1 class="text-5xl font-bold">
+				<a href="/">{SITE_TITLE}</a>
+			</h1>
+			<p class="text-sm mt-2">{SITE_DESCRIPTION}</p>
+		</header>
+	) : (
+		<header class="max-w-screen-sm py-4 mx-auto">
+			<h2 class="">
+				<a href="/" class="btn">
+					← Tony S.
+				</a>
+			</h2>
+		</header>
+	)
+}
