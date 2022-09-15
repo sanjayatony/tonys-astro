@@ -5,7 +5,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 <nav class="flex justify-between p-4 max-w-screen-xl mx-auto">
 	<div class="flex space-x-8 text-sm text-blue-700">
-		<HeaderLink href="/me">Me</HeaderLink>
 		<HeaderLink href="/now">Now</HeaderLink>
 		<HeaderLink href="/use">Use</HeaderLink>
 	</div>
@@ -32,11 +31,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 		</header>
 	) : (
 		<header class="max-w-screen-sm py-4 mx-auto">
-			<h2 class="">
-				<a href="/" class="btn">
-					← Tony S.
-				</a>
-			</h2>
+			<a href="/" class="btn">
+				← Tony S.
+			</a>
 		</header>
 	)
 }
