@@ -11,19 +11,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 	</div>
 	<div class="flex space-x-4 text-white text-xs italic">
 		<HeaderLink
-			href="https://twitter.com/astrodotbuild"
+			href="https://twitter.com/sanjayatony"
 			target="_blank"
 			class="btn">Twitter ↗</HeaderLink
 		>
 		<HeaderLink
-			href="https://github.com/withastro/astro"
+			href="https://github.com/sanjayatony"
 			target="_blank"
 			class="btn">GitHub ↗</HeaderLink
 		>
 	</div>
 </nav>
 {
-	Astro.url.pathname == "/" || Astro.url.pathname == "/wp" ? (
+	Astro.url.pathname == "/" ? (
 		<header class="max-w-screen-md py-24 text-center mx-auto">
 			<h1 class="text-5xl font-bold">
 				<a href="/">{SITE_TITLE}</a>
