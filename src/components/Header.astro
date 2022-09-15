@@ -23,7 +23,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 	</div>
 </nav>
 {
-	Astro.url.pathname == "/" ? (
+	Astro.url.pathname == "/" || Astro.url.pathname == "/wp" ? (
 		<header class="max-w-screen-md py-24 text-center mx-auto">
 			<h1 class="text-5xl font-bold">
 				<a href="/">{SITE_TITLE}</a>
