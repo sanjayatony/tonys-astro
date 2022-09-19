@@ -39,4 +39,14 @@
 	iframe {
 		@apply aspect-video w-full h-auto;
 	}
+	.prose {
+		figure {
+			img {
+				@apply mx-auto;
+			}
+			figcaption {
+				@apply text-center text-xs;
+			}
+		}
+	}
 }
