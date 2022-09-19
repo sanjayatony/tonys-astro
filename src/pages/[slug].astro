@@ -20,6 +20,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+const date = new Date(post.date);
 ---
 
 <html lang="en">
@@ -34,6 +35,7 @@ const { post } = Astro.props;
 		<Header />
 		<main>
 			<article class="prose prose-slate">
+				<time class="text-xs italic">{date.toDateString()}</time>
 				<h1 set:html={post.title["rendered"]}></h1>
 				<div set:html={post.content["rendered"]}></div>
 			</article>
