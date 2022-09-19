@@ -29,7 +29,11 @@ const posts = await response.json();
 									rel="prefetch"
 								/>
 							</h2>
-							<div set:html={post.excerpt["rendered"]} />
+							{post.acf.full_content ? (
+								<div set:html={post.content["rendered"]} />
+							) : (
+								<div set:html={post.excerpt["rendered"]} />
+							)}
 						</article>
 					))
 				}
