@@ -25,13 +25,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 	Astro.url.pathname == "/" ? (
 		<header class="max-w-screen-md py-24 text-center mx-auto px-4">
 			<h1 class="text-5xl font-bold">
-				<a href="/">{SITE_TITLE}</a>
+				<a href="/" rel="prefetch">
+					{SITE_TITLE}
+				</a>
 			</h1>
 			<p class="text-sm mt-2">{SITE_DESCRIPTION}</p>
 		</header>
 	) : (
 		<header class="max-w-screen-sm py-4 mx-auto px-4">
-			<a href="/" class="btn">
+			<a href="/" class="btn" rel="prefetch">
 				← Tony S.
 			</a>
 		</header>

@@ -23,7 +23,11 @@ const posts = await response.json();
 					posts.map((post) => (
 						<article>
 							<h2 class="post-title text-2xl font-bold">
-								<a href={post.slug} set:html={post.title["rendered"]} />
+								<a
+									href={post.slug}
+									set:html={post.title["rendered"]}
+									rel="prefetch"
+								/>
 							</h2>
 							<div set:html={post.excerpt["rendered"]} />
 						</article>
