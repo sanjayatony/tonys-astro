@@ -38,6 +38,18 @@ const date = new Date(post.date);
 				<time class="text-xs italic">{date.toDateString()}</time>
 				<h1 set:html={post.title["rendered"]}></h1>
 				<div set:html={post.content["rendered"]}></div>
+				{
+					post.acf.twitter_url ? (
+						<div class="text-xs italic mt-24">
+							Want to talk about this post?{" "}
+							<a href={post.acf.twitter_url} target="blank">
+								Discuss this on Twitter ↗
+							</a>
+						</div>
+					) : (
+						""
+					)
+				}
 			</article>
 		</main>
 		<Footer />
